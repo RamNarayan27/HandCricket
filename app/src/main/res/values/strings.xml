@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Hand Cricket</string>
+    <string name="category_congratulations">Congratulations!!</string>
+    <string name="category_Innings1">Innings 1</string>
+    <string name="category_Innings2">Innings 2</string>
+    <string name="category_instructions">Instructions</string>
+    <string name="Welcome">Welcome!!</string>
+    <string name="Text1">An exciting new game to enjoy the thrill of the classic game Hand Cricket using a phone.</string>
+    <string name="Ins">Instructions</string>
+    <string name="play">Play</string>
+    <string name="instructions">Instructions</string>
+    <string name="bowling">Bowling</string>
+    <string name="batting">Batting</string>
+    <string name="start">Start</string>
+    <string name="heads_or_tails">Heads or Tails?</string>
+    <string name="heads">Heads</string>
+    <string name="tails">Tails</string>
+</resources>

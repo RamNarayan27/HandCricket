@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.handcricket">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_cricket"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_cricket"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Toss_2"></activity>
+        <activity android:name=".Toss" />
+        <activity
+            android:name=".Innings_2"
+            android:label="@string/category_Innings2" />
+        <activity
+            android:name=".Innings_1"
+            android:label="@string/category_Innings1"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Instructions"
+            android:label="@string/category_instructions"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Congratulations"
+            android:label="@string/category_congratulations" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

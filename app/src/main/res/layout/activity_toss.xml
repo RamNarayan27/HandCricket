@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Toss"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/heads_or_tails"/>
+
+    <RadioGroup
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/heads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heads" />
+
+        <RadioButton
+            android:id="@+id/tails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tails" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/toss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textAllCaps="true" />
+</LinearLayout>
