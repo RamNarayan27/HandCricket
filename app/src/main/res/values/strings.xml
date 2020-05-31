@@ -15,4 +15,6 @@
     <string name="heads_or_tails">Heads or Tails?</string>
     <string name="heads">Heads</string>
     <string name="tails">Tails</string>
+    <string name="win">You won the toss!</string>
+    <string name="lost">You lost the toss!</string>
 </resources>

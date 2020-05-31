@@ -4,41 +4,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Toss"
-    tools:ignore="ExtraText">
+    tools:context=".BatOrBowl">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/heads_or_tails"/>
+        android:text="@string/Welcome" />
 
     <RadioGroup
-        android:id="@+id/choice"
+        android:id="@+id/bat_or_bowl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/heads"
+            android:id="@+id/batting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/heads" />
+            android:text="@string/batting" />
 
         <RadioButton
-            android:id="@+id/tails"
+            android:id="@+id/bowling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tails" />
+            android:text="@string/bowling" />
     </RadioGroup>
 
     <TextView
+        android:id="@+id/value"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/display_result" />
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/toss"
+        android:id="@+id/str"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:textAllCaps="true" />
+        android:text="@string/play" />
 </LinearLayout>
