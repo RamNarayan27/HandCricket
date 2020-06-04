@@ -7,11 +7,12 @@
     tools:context=".Innings_2">
 
     <TextView
-        android:id="@+id/game_play"
+        android:id="@+id/game_play_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
+        android:textColor="@android:color/black"
         android:textSize="28sp" />
 
     <LinearLayout
@@ -26,12 +27,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_0"
+            android:textColor="@android:color/black"
             android:textSize="112sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bar"
+            android:textColor="@android:color/black"
             android:textSize="112sp" />
 
         <TextView
@@ -39,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_0"
+            android:textColor="@android:color/black"
             android:textSize="112sp" />
     </LinearLayout>
 
@@ -58,6 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/over"
+                android:textColor="@android:color/black"
                 android:textSize="28sp" />
 
             <TextView
@@ -65,6 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_0"
+                android:textColor="@android:color/black"
                 android:textSize="28sp" />
         </LinearLayout>
 
@@ -79,6 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ball"
+                android:textColor="@android:color/black"
                 android:textSize="28sp" />
 
             <TextView
@@ -86,6 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_0"
+                android:textColor="@android:color/black"
                 android:textSize="28sp" />
         </LinearLayout>
     </RelativeLayout>
@@ -93,12 +101,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/computer_s_value"
+            android:textColor="@android:color/black"
             android:textSize="28sp" />
 
         <TextView
@@ -106,12 +116,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
+            android:textColor="@android:color/black"
             android:textSize="28sp" />
     </LinearLayout>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:columnCount="3">
 
         <Button
@@ -119,42 +131,60 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_1" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_1"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/run_2_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_2" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_2"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/run_2_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_3" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_3"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/run_2_4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_4" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_4"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/run_2_5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_5" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_5"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/run_2_6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/_6" />
+            android:layout_margin="1dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/_6"
+            android:textColor="@android:color/white" />
     </GridLayout>
 
     <Button
@@ -163,30 +193,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:text="@string/press"
-        android:textAllCaps="true" />
+        android:background="@color/colorPrimary"
+        android:text="@string/play"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/det_over1_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/over_1"
-        android:textSize="28sp" />
-
-    <TextView
-        android:id="@+id/det_over2_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/over_2"
-        android:textSize="28sp" />
-
-    <TextView
-        android:id="@+id/det_over3_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/over_3"
-        android:textSize="28sp" />
 </LinearLayout>

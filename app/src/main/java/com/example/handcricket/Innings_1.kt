@@ -15,6 +15,11 @@ class Innings_1 : AppCompatActivity() {
     private var mWicketCounter: Int = 0
     private var userInput: Int = 0
     private var computerValue: Int = 0
+    private var over11: Int = 0
+    private var over12: Int = 0
+    private var over13: Int = 0
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_innings_1)
@@ -68,6 +73,12 @@ class Innings_1 : AppCompatActivity() {
                 uRunCounter = uRunCounter.plus(userInput)
                 score_one.text = uRunCounter.toString()
             }
+            if (mBallCounter == 6)
+                over11 = uRunCounter
+            if (mBallCounter == 12)
+                over12 = uRunCounter - over11
+            if (mBallCounter == 18)
+                over13 = uRunCounter - over12
             if (mWicketCounter == 3 || mBallCounter == 18) {
                 startNextInnings(gameType)
             }
@@ -79,6 +90,12 @@ class Innings_1 : AppCompatActivity() {
                 cRunCounter = cRunCounter.plus(computerValue)
                 score_one.text = cRunCounter.toString()
             }
+            if (mBallCounter == 6)
+                over11 = cRunCounter
+            if (mBallCounter == 12)
+                over12 = cRunCounter - over11
+            if (mBallCounter == 18)
+                over13 = cRunCounter - over12
             if (mWicketCounter == 3 || mBallCounter == 18) {
                 startNextInnings(gameType)
             }
@@ -90,14 +107,24 @@ class Innings_1 : AppCompatActivity() {
             val intent = Intent(this, Innings_2::class.java)
             intent.putExtra("runs", uRunCounter.toString())
             intent.putExtra("GameType", gameType)
+            intent.putExtra("over11", over11.toString())
+            intent.putExtra("over12", over12.toString())
+            intent.putExtra("over13", over13.toString())
+            intent.putExtra("wicket", mWicketCounter.toString())
             Toast.makeText(this, "Score is: $uRunCounter", Toast.LENGTH_SHORT).show()
             startActivity(intent)
+            finish()
         } else {
             val intent = Intent(this, Innings_2::class.java)
             intent.putExtra("runs", cRunCounter.toString())
             intent.putExtra("GameType", "Bowling")
+            intent.putExtra("over11", over11.toString())
+            intent.putExtra("over12", over12.toString())
+            intent.putExtra("over13", over13.toString())
+            intent.putExtra("wicket", mWicketCounter.toString())
             Toast.makeText(this, "Score is: $cRunCounter", Toast.LENGTH_SHORT).show()
             startActivity(intent)
+            finish()
         }
     }
 }

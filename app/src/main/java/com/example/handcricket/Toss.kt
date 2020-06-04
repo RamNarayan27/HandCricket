@@ -37,10 +37,12 @@ class Toss : AppCompatActivity() {
             if (res == true) {
                 val intent = Intent(this, BatOrBowl::class.java)
                 startActivity(intent)
+                finish()
             } else {
                 val intent = Intent(this, Innings_1::class.java)
                 intent.putExtra("Value", R.string.bowling)
                 startActivity(intent)
+                finish()
             }
         }
     }

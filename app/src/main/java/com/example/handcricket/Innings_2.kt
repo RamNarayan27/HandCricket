@@ -1,11 +1,13 @@
 package com.example.handcricket
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_innings_1.*
 import kotlinx.android.synthetic.main.activity_innings_2.*
 
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class Innings_2 : AppCompatActivity() {
     private var uRunCounter: Int = 0
     private var cRunCounter: Int = 0
@@ -15,10 +17,23 @@ class Innings_2 : AppCompatActivity() {
     private var userInput: Int = 0
     private var computerValue: Int = 0
     private var prevInningsScore: Int = 0
+    private var over11: Int = 0
+    private var over12: Int = 0
+    private var over13: Int = 0
+    private var over21: Int = 0
+    private var over22: Int = 0
+    private var over23: Int = 0
+    private var wicket1: Int = 0
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_innings_2)
         val gameType: String? = intent.getStringExtra("GameType")
+        if (gameType == "Batting")
+            game_play_one.text = "Bowling"
+        else
+            game_play_one.text = "Batting"
         val runsScored: String? = intent.getStringExtra("runs")
         prevInningsScore = runsScored.toString().toInt()
         computerValue = compValue()
@@ -43,6 +58,10 @@ class Innings_2 : AppCompatActivity() {
         press_two.setOnClickListener {
             game(gameType)
         }
+        over11 = intent.getStringExtra("over11").toInt()
+        over12 = intent.getStringExtra("over12").toInt()
+        over13 = intent.getStringExtra("over13").toInt()
+        wicket1 = intent.getStringExtra("wicket").toInt()
     }
 
     private fun compValue(): Int {
@@ -67,6 +86,12 @@ class Innings_2 : AppCompatActivity() {
                 cRunCounter = cRunCounter.plus(computerValue)
                 score_two.text = cRunCounter.toString()
             }
+            if (mBallCounter == 6)
+                over21 = cRunCounter
+            if (mBallCounter == 12)
+                over22 = cRunCounter - over21
+            if (mBallCounter == 18)
+                over23 = cRunCounter - over22
             if (mWicketCounter == 3 || mBallCounter == 18) {
                 startCongratulations(prevInningsScore, cRunCounter, gameType)
             }
@@ -79,6 +104,12 @@ class Innings_2 : AppCompatActivity() {
                 uRunCounter = uRunCounter.plus(userInput)
                 score_two.text = uRunCounter.toString()
             }
+            if (mBallCounter == 6)
+                over21 = uRunCounter
+            if (mBallCounter == 12)
+                over22 = uRunCounter - over21
+            if (mBallCounter == 18)
+                over23 = uRunCounter - over22
             if (mWicketCounter == 3 || mBallCounter == 18) {
                 startCongratulations(prevInningsScore, uRunCounter, gameType)
             }
@@ -95,24 +126,106 @@ class Innings_2 : AppCompatActivity() {
                 //user has won
                 val intent = Intent(this, Congratulations::class.java)
                 intent.putExtra("Result", "User has won!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
                 startActivity(intent)
+                finish()
+            } else if (prevInningsScore == curInningsScore) {
+                //draw
+                val intent = Intent(this, Congratulations::class.java)
+                intent.putExtra("Result", "It's a Draw!!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
+                startActivity(intent)
+                finish()
             } else {
                 //computer has won
                 val intent = Intent(this, Congratulations::class.java)
                 intent.putExtra("Result", "Computer has won!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
                 startActivity(intent)
+                finish()
             }
         } else if (gameType == "Bowling") {
             if (prevInningsScore > curInningsScore) {
                 //computer has won
                 val intent = Intent(this, Congratulations::class.java)
                 intent.putExtra("Result", "Computer has won!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
                 startActivity(intent)
+                finish()
+            } else if (prevInningsScore == curInningsScore) {
+                //draw
+                val intent = Intent(this, Congratulations::class.java)
+                intent.putExtra("Result", "It's a Draw!!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
+                startActivity(intent)
+                finish()
             } else {
                 //user has won
                 val intent = Intent(this, Congratulations::class.java)
                 intent.putExtra("Result", "User has won!")
+                intent.putExtra("GameType", gameType)
+                intent.putExtra("over11", over11.toString())
+                intent.putExtra("over12", over12.toString())
+                intent.putExtra("over13", over13.toString())
+                intent.putExtra("over21", over21.toString())
+                intent.putExtra("over22", over22.toString())
+                intent.putExtra("over23", over23.toString())
+                intent.putExtra("wicket1", wicket1.toString())
+                intent.putExtra("wicket2", mWicketCounter.toString())
+                intent.putExtra("Innings1_Score", prevInningsScore.toString())
+                intent.putExtra("Innings2_Score", curInningsScore.toString())
                 startActivity(intent)
+                finish()
             }
         }
     }

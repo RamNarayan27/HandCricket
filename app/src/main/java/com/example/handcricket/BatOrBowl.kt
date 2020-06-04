@@ -22,6 +22,7 @@ class BatOrBowl : AppCompatActivity() {
             val intent = Intent(this, Innings_1::class.java)
             intent.putExtra("Value", batOrBowl)
             startActivity(intent)
+            finish()
         }
     }
 }
