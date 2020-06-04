@@ -12,7 +12,6 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_toss.*
 
 class Toss : AppCompatActivity() {
-    private var ultimateChoice: String? = null
     private var computerChoice: String? = setToss()
     private lateinit var usersChoice: String
     private var res: Boolean? = null

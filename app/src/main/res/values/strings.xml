@@ -17,4 +17,19 @@
     <string name="tails">Tails</string>
     <string name="win">You won the toss!</string>
     <string name="lost">You lost the toss!</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_0">0</string>
+    <string name="bar">/</string>
+    <string name="over">Over# :</string>
+    <string name="press">Press</string>
+    <string name="ball">Ball# :</string>
+    <string name="over_1">Over #1:</string>
+    <string name="over_2">Over #2:</string>
+    <string name="over_3">Over #3:</string>
+    <string name="computer_s_value">Computer\'s Value: </string>
 </resources>

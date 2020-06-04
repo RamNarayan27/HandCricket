@@ -18,8 +18,7 @@
             android:label="@string/category_Innings2" />
         <activity
             android:name=".Innings_1"
-            android:label="@string/category_Innings1"
-            android:parentActivityName=".MainActivity" />
+            android:label="@string/category_Innings1" />
         <activity
             android:name=".Instructions"
             android:label="@string/category_instructions"
