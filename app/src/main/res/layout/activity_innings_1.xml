@@ -133,6 +133,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_1"
             android:textColor="@android:color/white" />
 
@@ -143,6 +144,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_2"
             android:textColor="@android:color/white" />
 
@@ -153,6 +155,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_3"
             android:textColor="@android:color/white" />
 
@@ -163,6 +166,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_4"
             android:textColor="@android:color/white" />
 
@@ -173,6 +177,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_5"
             android:textColor="@android:color/white" />
 
@@ -183,6 +188,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="1dp"
             android:background="@color/colorPrimary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/_6"
             android:textColor="@android:color/white" />
     </GridLayout>
@@ -194,6 +200,7 @@
         android:layout_gravity="center"
         android:layout_margin="16dp"
         android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="@string/play"
         android:textAllCaps="true"
         android:textColor="@android:color/white" />

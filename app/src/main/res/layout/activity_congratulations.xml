@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="8dp"
-        android:textSize="35sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,36 +34,36 @@
                 android:gravity="center_horizontal"
                 android:text="@string/player"
                 android:textAlignment="center"
-                android:textSize="28sp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:layout_gravity="center">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="64sp"
                     android:id="@+id/P_score"
-                    android:textColor="@android:color/black" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="64sp"
                     android:text="@string/bar"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
 
                 <TextView
+                    android:id="@+id/P_wicket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="64sp"
-                    android:id="@+id/P_wicket"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,15 +76,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_1"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/P_over_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -97,15 +97,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_2"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/P_over_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -118,15 +118,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_3"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/P_over_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -150,36 +150,36 @@
                 android:layout_marginBottom="8dp"
                 android:text="@string/computer"
                 android:textAlignment="center"
-                android:textSize="28sp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:layout_gravity="center">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="64sp"
                     android:id="@+id/C_score"
-                    android:textColor="@android:color/black" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="64sp"
                     android:text="@string/bar"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
 
                 <TextView
+                    android:id="@+id/C_wicket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="64sp"
-                    android:id="@+id/C_wicket"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="64sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -192,15 +192,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_1"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/C_over_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -213,15 +213,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_2"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/C_over_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -234,15 +234,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/over_3"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/C_over_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -254,18 +254,19 @@
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
         android:text="@string/thanks_for_playing"
-        android:textSize="40sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
 
     <Button
+        android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:id="@+id/exit"
         android:layout_gravity="center"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="@string/exit"
         android:textAllCaps="true"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimary" />
+        android:textColor="@android:color/white" />
 </LinearLayout>

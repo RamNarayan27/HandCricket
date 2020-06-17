@@ -9,11 +9,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/batting_or_bowling"
-        android:textSize="32sp"
-        android:layout_margin="32dp"
         android:layout_gravity="center"
-        android:textColor="@android:color/black" />
+        android:layout_margin="32dp"
+        android:text="@string/batting_or_bowling"
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
 
     <View
         android:layout_width="256dp"
@@ -32,38 +32,39 @@
             android:id="@+id/batting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/batting"
             android:layout_margin="16dp"
-            android:textSize="32sp"
-            android:textColor="@android:color/black" />
+            android:text="@string/batting"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
 
         <RadioButton
             android:id="@+id/bowling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bowling"
-            android:textSize="32sp"
             android:layout_margin="16dp"
-            android:textColor="@android:color/black" />
+            android:text="@string/bowling"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="32sp"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/str"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/play"
-        android:textSize="32sp"
         android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/play"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary" />
+        android:textSize="32sp" />
 </LinearLayout>

@@ -10,11 +10,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/heads_or_tails"
-        android:layout_margin="32dp"
         android:layout_gravity="center"
-        android:textSize="32sp"
-        android:textColor="@android:color/black" />
+        android:layout_margin="32dp"
+        android:text="@string/heads_or_tails"
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
 
     <View
         android:layout_width="256dp"
@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="@string/heads"
-            android:textSize="32sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
 
         <RadioButton
             android:id="@+id/tails"
@@ -44,28 +44,29 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="@string/tails"
-            android:textSize="32sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
     </RadioGroup>
 
     <TextView
+        android:id="@+id/display_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/display_result"
-        android:textSize="32sp"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/toss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:textSize="32sp"
         android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="2dp"
+        android:text="@string/start"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
-        android:padding="2dp"
-        android:background="@color/colorPrimary" />
+        android:textSize="32sp" />
 </LinearLayout>
